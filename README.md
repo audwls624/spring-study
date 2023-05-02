@@ -68,5 +68,24 @@
 1. `helloController`에서 model(name:spring) 에 데이터를 담아 `hello-template` return
 2. `ViewResolver` 에서 `templates/hello-template.html` (Tymeleaf 템플릿 엔진 처리) HTML 변환 후 렌더링
 
+## API
+*@ResponseBody 문자 반환*
+- `@ResponseBody`를 사용하면 `viewResolver`를 사용하지 않음
+- 대신에 HTTP BODY에 문자 내용을 직접 반환(HTTP BODY TAG를 말하는 것이 아님)
+*실행*
+- http://locahost:8080/hello-string?name=spring
+
+*ResponseBody 객체 반환*
+- `@ResponseBody`를 사용하고, 객체를 반환하면 객체가 JSON으로 변환됨.
+*실행*
+- http://localhost:8080/hello-adpi?name=spring
+- `@ResponseBody`를 사용
+  * HTTP BODY에 문자 내용을 직접 반환
+  * `viewResolver` 대신에 `HttpMessageConverter`가 동작
+  * 기본 문자 처리: `StringHttpMessageConverter`
+  * 기본 객체 처리: `MappingJackson2HttpMessageConverter`
+  * byte 처리 등등 기타 여러 HttpMessageConverter가 기본으로 등록되어 있음
+  * 참고: 클라이언트의 HTTP Accept 헤더와 서버의 컨트롤러 반환 타입 정보 둘을 조합해서 `HttpMessageConverter`가 선택된다.
+
 
 ** 출처: https://www.inflearn.com/course/lecture?courseSlug=%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8&unitId=49605
