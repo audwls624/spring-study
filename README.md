@@ -40,4 +40,13 @@
   * `resources:templates/` + {ViewName} + `.html`
   * 참고: `spring-boot-devtools` 라이브러리 추가하면, html 파일을 컴파일만 해주면 서버 재시작 없이 View 파일 변경이 가능하다.
 
+## 빌드하고 실행하기
+
+- 콘솔로 이동
+1. `./gradlew build`
+2. `cd build/libs`
+3. `java -jar hello-spring-0.0.1-SNAPSHOT.jar`
+4. 실행 확인
+
+
 ** 출처: https://www.inflearn.com/course/lecture?courseSlug=%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8&unitId=49605
