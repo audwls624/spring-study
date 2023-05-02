@@ -48,5 +48,25 @@
 3. `java -jar hello-spring-0.0.1-SNAPSHOT.jar`
 4. 실행 확인
 
+# 스프랭 웹 개발 기초
+
+## 정적 컨텐츠
+- 스프링 부트 정적 컨텐츠 기능
+- https://docs.spring.io/spring-boot/docs/current/reference/html/web.html#web
+
+*실행*
+http://localhost:8080/hello-static.html
+1. `hello-static` 관련 컨트롤러 탐색
+2. 1이 없으면 resources: `statc/hello-static.html` 가져옴
+
+## MVC, 템플릿 엔진
+- MVC: Model, View, Controller
+
+
+*실행*
+- http://localhost:8080/hello-mvc?name=spring
+1. `helloController`에서 model(name:spring) 에 데이터를 담아 `hello-template` return
+2. `ViewResolver` 에서 `templates/hello-template.html` (Tymeleaf 템플릿 엔진 처리) HTML 변환 후 렌더링
+
 
 ** 출처: https://www.inflearn.com/course/lecture?courseSlug=%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8&unitId=49605
