@@ -75,7 +75,7 @@
 *실행*
 - http://locahost:8080/hello-string?name=spring
 
-*ResponseBody 객체 반환*
+*@ResponseBody 객체 반환*
 - `@ResponseBody`를 사용하고, 객체를 반환하면 객체가 JSON으로 변환됨.
 *실행*
 - http://localhost:8080/hello-adpi?name=spring
