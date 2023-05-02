@@ -55,7 +55,7 @@
 - https://docs.spring.io/spring-boot/docs/current/reference/html/web.html#web
 
 *실행*
-http://localhost:8080/hello-static.html
+- http://localhost:8080/hello-static.html
 1. `hello-static` 관련 컨트롤러 탐색
 2. 1이 없으면 resources: `statc/hello-static.html` 가져옴
 
